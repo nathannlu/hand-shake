@@ -19,6 +19,6 @@ This app would greatly assist the over 60 thousand patients diagnosed each year
 https://www.parkinson.org/Understanding-Parkinsons/Statistics
 (in the US alone) and their practioners in their battle against Parkinsons. In the
 future, this app could be developed into a portal,in which victims and practicioners 
-can track their progress and see improvements. Practitioners could also instruct  
-patientson when to take the drug and how much, and victims with this app would have 
-the option to set notifications when it was time to administer treatment. 
+can track their progress and see improvements. Practitioners could also instruct patients 
+on when to take the drug and how much, and victims with this app would have the option 
+to set notifications when it was time to administer treatment. 
