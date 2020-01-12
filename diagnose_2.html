@@ -28,6 +28,11 @@
     }
   </style>
 
+  <ons-toolbar>
+    <div class="left"><ons-back-button></ons-back-button></div>
+    <div class="center">Test 1</div>
+  </ons-toolbar>
+
   <div class="test_2" style="margin: 0 auto; display: block; width: 90%">
     <h1>Test 1:<br />Tremor Test</h1>
     <p>
@@ -41,6 +46,7 @@
     <ons-button id="btn">Record</ons-button>
   </div>
 
+
   <script>
     var ball = document.querySelector(".ball");
     var garden = document.querySelector(".garden");
@@ -51,6 +57,10 @@
 
     var URL = "";
     var xhr = new XMLHttpRequest();
+
+    function toDiagnoseThree() {
+      document.getElementById('appNavigator').pushPage('diagnose_3.html', {animation: 'slide'})
+    }
 
     function handleOrientation(event) {
       console.log("event ran");
@@ -69,8 +79,6 @@
       output.innerHTML = "beta : " + x + "\n";
       output.innerHTML += "gamma: " + y + "\n";
 
-      // Because we don't want to have the device upside down
-      // We constrain the x value to the range [-90,90]
       if (x > 90) {
         x = 90;
       }
@@ -78,13 +86,9 @@
         x = -90;
       }
 
-      // To make computation easier we shift the range of
-      // x and y to [0,180]
       x += 90;
       y += 90;
 
-      // 10 is half the size of the ball
-      // It center the positioning point to the center of the ball
       ball.style.top = (maxY * y) / 180 - 10 + "px";
       ball.style.left = (maxX * x) / 180 - 10 + "px";
     }
@@ -105,9 +109,10 @@
           ++count;
           break;  
         case 2:
+          toDiagnoseThree();
           console.log('push to new page');
       }
-
     });
   </script>
 </ons-page>
+

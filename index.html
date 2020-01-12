@@ -8,24 +8,28 @@
     />
   </head>
   <body>
-    <ons-page>
-      
-      <ons-toolbar>
-        <div class="center">Tab 1</div>
-      </ons-toolbar>
-    
-      <ons-tabbar swipeable position="bottom">
-        <ons-tab page="home.html" label="Home" icon="ion-home, material:md-home" active>
-        </ons-tab>
-        <ons-tab page="diagnose_2.html" label="Diagnose" icon="md-face">
-        </ons-tab>
-        <ons-tab page="tab2.html" label="Profile" icon="md-face">
-        </ons-tab>
-      </ons-tabbar>
+    <ons-navigator id="appNavigator">
+      <ons-page>
+        
+        <ons-toolbar>
+          <div class="center">Tab 1</div>
+        </ons-toolbar>
+        
+        <ons-tabbar position="bottom" animation="none">
+          <ons-tab page="home.html" label="Home" icon="ion-home, material:md-home" active>
+          </ons-tab>
+          <ons-tab page="diagnose.html" label="Diagnose" icon="fa-stethoscope">
+          </ons-tab>
+          <ons-tab page="profile.html" label="Profile" icon="md-face">
+          </ons-tab>
+        </ons-tabbar>
 
-    </ons-page>
+      </ons-page>
+    </ons-navigator>
+
     
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="script.js"></script>
   </body>
+  
 </html>

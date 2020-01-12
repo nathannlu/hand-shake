@@ -1,0 +1,24 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left"><ons-back-button></ons-back-button></div>
+    <div class="center">Test 3</div>
+  </ons-toolbar>
+
+  <div class="test_2" style="margin: 0 auto; display: block; width: 90%">
+    <h1>Test 3:<br />Voice</h1>
+    <p>
+      Should you require build tools, they are included for developing.
+    </p>
+
+
+  </div>
+
+  <script>
+    var btn = document.getElementById("btn-record");
+    var count = 0;
+    btn.addEventListener("click", () => {
+      console.log('take picture and send to server for analysis')
+      btn.innerHTML = "Continue"
+    });
+  </script>
+</ons-page>

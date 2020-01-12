@@ -3,10 +3,11 @@
 
   <ons-button id="start--btn">Start</ons-button>
 
+
+
   <script>
     document.getElementById('start--btn').addEventListener('click', () => {
-      console.log('run')
-      document.getElementById('myNavigator').pushPage('home.html');
+      document.getElementById('appNavigator').pushPage('diagnose_2.html', {animation: 'slide'})
     })
   </script>
 </ons-page>
