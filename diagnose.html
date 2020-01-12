@@ -1,0 +1,12 @@
+<ons-page id="diagnose">
+  diagnose
+
+  <ons-button id="start--btn">Start</ons-button>
+
+  <script>
+    document.getElementById('start--btn').addEventListener('click', () => {
+      console.log('run')
+      document.getElementById('myNavigator').pushPage('home.html');
+    })
+  </script>
+</ons-page>

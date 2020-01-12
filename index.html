@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+  </head>
+  <body>
+    <ons-navigator swipeable id="myNavigator" page="diagnose_2.html"></ons-navigator>
+    <ons-page>
+      
+      <ons-toolbar>
+        <div class="center">Tab 1</div>
+      </ons-toolbar>
+    
+      <ons-tabbar swipeable position="bottom">
+        <ons-tab page="home.html" label="Home" icon="ion-home, material:md-home" active>
+        </ons-tab>
+        <ons-tab page="diagnose_2.html" label="Diagnose" icon="md-face">
+        </ons-tab>
+        <ons-tab page="tab2.html" label="Profile" icon="md-face">
+        </ons-tab>
+      </ons-tabbar>
+
+    </ons-page>
+    
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="tremor.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
