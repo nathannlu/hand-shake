@@ -1,4 +1,17 @@
 <ons-page>
+  <style>
+    #btn-record {
+      width: 90%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: 3%;
+      margin-top: 100px;
+      display: inline-block;
+    }
+  
+  </style>
+  
   <ons-toolbar>
     <div class="left"><ons-back-button></ons-back-button></div>
     <div class="center">Test 2</div>
@@ -11,10 +24,11 @@
     </p>
 
     <div>
-      CAMERA HERE
+      <img style="width: 100%;" src="https://www.researchgate.net/profile/Tinatin_Chabrashvili/publication/269186621/figure/fig2/AS:328302335152133@1455284784592/Handwriting-samples-Micrographia-was-primarily-demonstrated-in-the-patients-right-hand.png" />
+      SAMPLE_IMG
     </div>
 
-    <ons-button id="btn-record">Take a picture</ons-button>
+    <ons-button id="btn-record">Use this picture</ons-button>
   </div>
 
   <script>
@@ -23,14 +37,11 @@
     }
 
     var btn = document.getElementById("btn-record");
-    var count = 0;
+
     btn.addEventListener("click", () => {
-      console.log('take picture and send to server for analysis')
-      btn.innerHTML = "Continue"
-      if (count >= 1) {
+
         toDiagnoseFour();
-      }
-      ++count;
+
     });
   </script>
 </ons-page>

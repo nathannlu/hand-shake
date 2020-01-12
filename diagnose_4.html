@@ -1,4 +1,17 @@
 <ons-page>
+  <style>
+    #btn-voice {
+      width: 90%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: 3%;
+      margin-top: 100px;
+      display: inline-block;
+    }
+  </style>
+
+
   <ons-toolbar>
     <div class="left"><ons-back-button></ons-back-button></div>
     <div class="center">Test 3</div>
@@ -10,7 +23,8 @@
       Should you require build tools, they are included for developing.
     </p>
 
-    <ons-button id="btn-voice">Take a picture</ons-button>
+    <img style="width: 100%" src="./mic.png" />
+    <ons-button id="btn-voice">Record</ons-button>
   </div>
 
   <script>
