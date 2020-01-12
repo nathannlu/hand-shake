@@ -1,3 +1,40 @@
 <ons-page>
-  This is the results page
+  <style>
+    #btn-result {
+      width: 90%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: 3%;
+      margin-top: 100px;
+      display: inline-block;
+    }
+    #close {
+      padding-left: 20px;
+      font-size: 30px;
+    }
+  </style>
+
+  <ons-toolbar>
+    <div class="left">
+      <div id="close">
+        &times;
+      </div>
+    </div>
+    <div class="center">Result</div>
+  </ons-toolbar>
+  <div style="margin: 0 auto; display: block; width: 90%">
+    <h1>
+      Your results:
+    </h1>
+    <ons-button id="btn-result">Send to a physician</ons-button>
+  </div>
+
+  <script>
+    document.getElementById("close").addEventListener("click", function() {
+      document
+        .getElementById("appNavigator")
+        .resetToPage("home_with_nav.html", { animation: "fade" });
+    });
+  </script>
 </ons-page>
