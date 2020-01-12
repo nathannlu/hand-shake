@@ -17,17 +17,29 @@
       background: green;
       border-radius: 100%;
     }
+    #btn {
+      width: 90%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: 3%;
+      margin-top: 100px;
+      display: inline-block;
+    }
   </style>
-  <div class="test_2">
-    <h1>
-      Test 1
-    </h1>
+
+  <div class="test_2" style="margin: 0 auto; display: block; width: 90%">
+    <h1>Test 1:<br />Tremor Test</h1>
+    <p>
+      Should you require build tools, they are included for developing.
+    </p>
+
     <div class="garden">
       <div class="ball"></div>
     </div>
-    <button id="btn">Record</button>
+    <pre class="output"></pre>
+    <ons-button id="btn">Record</ons-button>
   </div>
-  <pre class="output"></pre>
 
   <script>
     var ball = document.querySelector(".ball");
@@ -78,9 +90,24 @@
     }
 
     var btn = document.getElementById("btn");
-
+    var count = 0;
     btn.addEventListener("click", () => {
-      window.addEventListener("deviceorientation", handleOrientation);
+      switch(count) {
+        case 0:
+          window.addEventListener("deviceorientation", handleOrientation);
+          btn.innerHTML = "Stop"
+          ++count;  
+          break;
+        case 1:
+          window.removeEventListener("deviceorientation", handleOrientation);
+          console.log('removed listener')
+          btn.innerHTML = "Continue"
+          ++count;
+          break;  
+        case 2:
+          console.log('push to new page');
+      }
+
     });
   </script>
 </ons-page>
