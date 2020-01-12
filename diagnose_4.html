@@ -10,15 +10,23 @@
       Should you require build tools, they are included for developing.
     </p>
 
-
+    <ons-button id="btn-voice">Take a picture</ons-button>
   </div>
 
   <script>
-    var btn = document.getElementById("btn-record");
+    function toResult() {
+      document.getElementById('appNavigator').pushPage('result.html', {animation: 'slide'})
+    }
+
+    var btn = document.getElementById("btn-voice");
     var count = 0;
     btn.addEventListener("click", () => {
       console.log('take picture and send to server for analysis')
       btn.innerHTML = "Continue"
+      if (count >= 1) {
+        toResult();
+      }
+      ++count;
     });
   </script>
 </ons-page>

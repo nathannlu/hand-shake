@@ -1,13 +1,33 @@
 <ons-page id="diagnose">
-  diagnose
+  <style>
+    #btn-start {
+      width: 90%;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: 3%;
+      margin-top: 100px;
+      display: inline-block;
+    }
+  </style>
+  
+  <div style="margin: 0 auto; display: block; width: 90%">
+    <h1>
+      Test for <br/>parkinsons.
+    </h1>
+    <p>
+      Should you require build tools, they are included for developing Bootstrap
+      and its docs, but they’re likely unsuitable for your own purposes.
+    </p>
 
-  <ons-button id="start--btn">Start</ons-button>
-
-
+    <ons-button id="btn-start">Record</ons-button>    
+  </div>
 
   <script>
-    document.getElementById('start--btn').addEventListener('click', () => {
-      document.getElementById('appNavigator').pushPage('diagnose_2.html', {animation: 'slide'})
-    })
+    document.getElementById("btn-start").addEventListener("click", () => {
+      document
+        .getElementById("appNavigator")
+        .pushPage("diagnose_2.html", { animation: "slide" });
+    });
   </script>
 </ons-page>
